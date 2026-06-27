@@ -1,0 +1,776 @@
+$date
+	Thu Jun 18 07:08:34 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_apb_subsystem $end
+$var wire 1 ! pready $end
+$var wire 32 " prdata [31:0] $end
+$var wire 1 # irq $end
+$var wire 8 $ gpio [7:0] $end
+$var reg 32 % paddr [31:0] $end
+$var reg 1 & pclk $end
+$var reg 1 ' penable $end
+$var reg 1 ( presetn $end
+$var reg 1 ) psel $end
+$var reg 32 * pwdata [31:0] $end
+$var reg 1 + pwrite $end
+$scope module DUT $end
+$var wire 1 , gpio_pready $end
+$var wire 32 - paddr [31:0] $end
+$var wire 1 & pclk $end
+$var wire 1 ' penable $end
+$var wire 1 ( presetn $end
+$var wire 1 ) psel $end
+$var wire 32 . pwdata [31:0] $end
+$var wire 1 + pwrite $end
+$var wire 1 / timer_pready $end
+$var wire 1 0 timer_pwrite $end
+$var wire 32 1 timer_pwdata [31:0] $end
+$var wire 1 2 timer_psel $end
+$var wire 32 3 timer_prdata [31:0] $end
+$var wire 1 4 timer_penable $end
+$var wire 32 5 timer_paddr [31:0] $end
+$var wire 1 ! pready $end
+$var wire 32 6 prdata [31:0] $end
+$var wire 1 # irq $end
+$var wire 1 7 gpio_pwrite $end
+$var wire 32 8 gpio_pwdata [31:0] $end
+$var wire 1 9 gpio_psel $end
+$var wire 32 : gpio_prdata [31:0] $end
+$var wire 1 ; gpio_penable $end
+$var wire 32 < gpio_paddr [31:0] $end
+$var wire 8 = gpio [7:0] $end
+$scope module gpio_inst $end
+$var wire 1 > apb_read $end
+$var wire 1 ? apb_write $end
+$var wire 1 & pclk $end
+$var wire 1 , pready $end
+$var wire 1 ( presetn $end
+$var wire 1 7 pwrite $end
+$var wire 32 @ pwdata [31:0] $end
+$var wire 1 9 psel $end
+$var wire 1 ; penable $end
+$var wire 32 A paddr [31:0] $end
+$var wire 8 B gpio [7:0] $end
+$var reg 8 C data_reg [7:0] $end
+$var reg 8 D dir_reg [7:0] $end
+$var reg 32 E prdata [31:0] $end
+$scope begin GPIO_BUFFER[0] $end
+$var parameter 2 F i $end
+$upscope $end
+$scope begin GPIO_BUFFER[1] $end
+$var parameter 2 G i $end
+$upscope $end
+$scope begin GPIO_BUFFER[2] $end
+$var parameter 3 H i $end
+$upscope $end
+$scope begin GPIO_BUFFER[3] $end
+$var parameter 3 I i $end
+$upscope $end
+$scope begin GPIO_BUFFER[4] $end
+$var parameter 4 J i $end
+$upscope $end
+$scope begin GPIO_BUFFER[5] $end
+$var parameter 4 K i $end
+$upscope $end
+$scope begin GPIO_BUFFER[6] $end
+$var parameter 4 L i $end
+$upscope $end
+$scope begin GPIO_BUFFER[7] $end
+$var parameter 4 M i $end
+$upscope $end
+$upscope $end
+$scope module interconnect $end
+$var wire 32 N gpio_paddr [31:0] $end
+$var wire 1 ; gpio_penable $end
+$var wire 32 O gpio_prdata [31:0] $end
+$var wire 1 , gpio_pready $end
+$var wire 1 9 gpio_psel $end
+$var wire 32 P gpio_pwdata [31:0] $end
+$var wire 1 7 gpio_pwrite $end
+$var wire 32 Q paddr [31:0] $end
+$var wire 1 ' penable $end
+$var wire 1 ) psel $end
+$var wire 32 R pwdata [31:0] $end
+$var wire 1 + pwrite $end
+$var wire 32 S timer_paddr [31:0] $end
+$var wire 1 4 timer_penable $end
+$var wire 1 / timer_pready $end
+$var wire 1 2 timer_psel $end
+$var wire 32 T timer_pwdata [31:0] $end
+$var wire 1 0 timer_pwrite $end
+$var wire 32 U timer_prdata [31:0] $end
+$var wire 1 V sel_timer $end
+$var wire 1 W sel_gpio $end
+$var wire 1 ! pready $end
+$var wire 32 X prdata [31:0] $end
+$upscope $end
+$scope module timer_inst $end
+$var wire 1 Y apb_read $end
+$var wire 1 Z apb_write $end
+$var wire 32 [ paddr [31:0] $end
+$var wire 1 & pclk $end
+$var wire 1 4 penable $end
+$var wire 1 / pready $end
+$var wire 1 ( presetn $end
+$var wire 1 2 psel $end
+$var wire 32 \ pwdata [31:0] $end
+$var wire 1 0 pwrite $end
+$var wire 1 # irq $end
+$var reg 32 ] control_reg [31:0] $end
+$var reg 32 ^ irq_status_reg [31:0] $end
+$var reg 32 _ load_reg [31:0] $end
+$var reg 32 ` prdata [31:0] $end
+$var reg 32 a value_reg [31:0] $end
+$upscope $end
+$upscope $end
+$scope task apb_read $end
+$var reg 32 b addr [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 32 c addr [31:0] $end
+$var reg 32 d data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b111 M
+b110 L
+b101 K
+b100 J
+b11 I
+b10 H
+b1 G
+b0 F
+$end
+#0
+$dumpvars
+bx d
+bx c
+bx b
+b0 a
+b0 `
+b0 _
+b0 ^
+b0 ]
+b0 \
+b0 [
+0Z
+0Y
+b0 X
+1W
+0V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 E
+b0 D
+b0 C
+bz B
+b0 A
+b0 @
+0?
+0>
+bz =
+b0 <
+0;
+b0 :
+09
+b0 8
+07
+b0 6
+b0 5
+04
+b0 3
+02
+b0 1
+00
+1/
+b0 .
+b0 -
+1,
+0+
+b0 *
+0)
+0(
+0'
+0&
+b0 %
+bz $
+0#
+b0 "
+1!
+$end
+#5000
+1&
+#10000
+0&
+#15000
+1&
+#20000
+0&
+#25000
+1&
+#30000
+0&
+#35000
+1&
+#40000
+0&
+#45000
+b11111111 d
+b100 c
+1(
+1&
+#50000
+0&
+#55000
+19
+b11111111 8
+b11111111 @
+b11111111 P
+b11111111 1
+b11111111 T
+b11111111 \
+b11111111 *
+b11111111 .
+b11111111 R
+b100 <
+b100 A
+b100 N
+b100 5
+b100 S
+b100 [
+b100 %
+b100 -
+b100 Q
+17
+10
+1+
+1)
+1&
+#60000
+0&
+#65000
+1?
+1;
+14
+1'
+1&
+#70000
+0&
+#75000
+b0 $
+b0 =
+b0 B
+b11111111 D
+0?
+09
+b10100101 d
+b0 c
+07
+00
+0+
+0;
+04
+0'
+0)
+1&
+#80000
+0&
+#85000
+19
+b10100101 8
+b10100101 @
+b10100101 P
+b10100101 1
+b10100101 T
+b10100101 \
+b10100101 *
+b10100101 .
+b10100101 R
+b0 <
+b0 A
+b0 N
+b0 5
+b0 S
+b0 [
+b0 %
+b0 -
+b0 Q
+17
+10
+1+
+1)
+1&
+#90000
+0&
+#95000
+1?
+1;
+14
+1'
+1&
+#100000
+0&
+#105000
+b10100101 $
+b10100101 =
+b10100101 B
+b10100101 C
+0?
+09
+b100 b
+07
+00
+0+
+0;
+04
+0'
+0)
+1&
+#110000
+0&
+#115000
+19
+b100 <
+b100 A
+b100 N
+b100 5
+b100 S
+b100 [
+b100 %
+b100 -
+b100 Q
+1)
+1&
+#120000
+0&
+#125000
+b11111111 "
+b11111111 6
+b11111111 X
+b11111111 :
+b11111111 E
+b11111111 O
+1>
+1;
+14
+1'
+1&
+#130000
+0&
+#135000
+b0 "
+b0 6
+b0 X
+b0 :
+b0 E
+b0 O
+0>
+09
+b0 b
+0;
+04
+0'
+0)
+1&
+#140000
+0&
+#145000
+19
+b0 <
+b0 A
+b0 N
+b0 5
+b0 S
+b0 [
+b0 %
+b0 -
+b0 Q
+1)
+1&
+#150000
+0&
+#155000
+b10100101 "
+b10100101 6
+b10100101 X
+b10100101 :
+b10100101 E
+b10100101 O
+1>
+1;
+14
+1'
+1&
+#160000
+0&
+#165000
+b0 "
+b0 6
+b0 X
+b0 :
+b0 E
+b0 O
+0>
+09
+b1010 d
+b1000000000000 c
+0;
+04
+0'
+0)
+1&
+#170000
+0&
+#175000
+12
+0W
+1V
+09
+b1010 8
+b1010 @
+b1010 P
+b1010 1
+b1010 T
+b1010 \
+b1010 *
+b1010 .
+b1010 R
+b1000000000000 <
+b1000000000000 A
+b1000000000000 N
+b1000000000000 5
+b1000000000000 S
+b1000000000000 [
+b1000000000000 %
+b1000000000000 -
+b1000000000000 Q
+17
+10
+1+
+1)
+1&
+#180000
+0&
+#185000
+1Z
+1;
+14
+1'
+1&
+#190000
+0&
+#195000
+b1010 a
+b1010 _
+0Z
+02
+b1 d
+b1000000001000 c
+07
+00
+0+
+0;
+04
+0'
+0)
+1&
+#200000
+0&
+#205000
+12
+b1 8
+b1 @
+b1 P
+b1 1
+b1 T
+b1 \
+b1 *
+b1 .
+b1 R
+b1000000001000 <
+b1000000001000 A
+b1000000001000 N
+b1000000001000 5
+b1000000001000 S
+b1000000001000 [
+b1000000001000 %
+b1000000001000 -
+b1000000001000 Q
+17
+10
+1+
+1)
+1&
+#210000
+0&
+#215000
+1Z
+1;
+14
+1'
+1&
+#220000
+0&
+#225000
+b1 ]
+0Z
+02
+07
+00
+0+
+0;
+04
+0'
+0)
+1&
+#230000
+0&
+#235000
+b1001 a
+1&
+#240000
+0&
+#245000
+b1000 a
+1&
+#250000
+0&
+#255000
+b111 a
+1&
+#260000
+0&
+#265000
+b110 a
+1&
+#270000
+0&
+#275000
+b101 a
+1&
+#280000
+0&
+#285000
+b100 a
+1&
+#290000
+0&
+#295000
+b11 a
+1&
+#300000
+0&
+#305000
+b10 a
+1&
+#310000
+0&
+#315000
+b1 a
+1&
+#320000
+0&
+#325000
+b0 a
+1&
+#330000
+0&
+#335000
+b1000000000000 b
+1#
+b0 ]
+b1 ^
+1&
+#340000
+0&
+#345000
+12
+b1000000000000 <
+b1000000000000 A
+b1000000000000 N
+b1000000000000 5
+b1000000000000 S
+b1000000000000 [
+b1000000000000 %
+b1000000000000 -
+b1000000000000 Q
+1)
+1&
+#350000
+0&
+#355000
+b1010 "
+b1010 6
+b1010 X
+b1010 3
+b1010 U
+b1010 `
+1Y
+1;
+14
+1'
+1&
+#360000
+0&
+#365000
+b0 "
+b0 6
+b0 X
+b0 3
+b0 U
+b0 `
+0Y
+02
+b1000000000100 b
+0;
+04
+0'
+0)
+1&
+#370000
+0&
+#375000
+12
+b1000000000100 <
+b1000000000100 A
+b1000000000100 N
+b1000000000100 5
+b1000000000100 S
+b1000000000100 [
+b1000000000100 %
+b1000000000100 -
+b1000000000100 Q
+1)
+1&
+#380000
+0&
+#385000
+1Y
+1;
+14
+1'
+1&
+#390000
+0&
+#395000
+0Y
+02
+b1000000001000 b
+0;
+04
+0'
+0)
+1&
+#400000
+0&
+#405000
+12
+b1000000001000 <
+b1000000001000 A
+b1000000001000 N
+b1000000001000 5
+b1000000001000 S
+b1000000001000 [
+b1000000001000 %
+b1000000001000 -
+b1000000001000 Q
+1)
+1&
+#410000
+0&
+#415000
+1Y
+1;
+14
+1'
+1&
+#420000
+0&
+#425000
+0Y
+02
+b1000000001100 b
+0;
+04
+0'
+0)
+1&
+#430000
+0&
+#435000
+12
+b1000000001100 <
+b1000000001100 A
+b1000000001100 N
+b1000000001100 5
+b1000000001100 S
+b1000000001100 [
+b1000000001100 %
+b1000000001100 -
+b1000000001100 Q
+1)
+1&
+#440000
+0&
+#445000
+b1 "
+b1 6
+b1 X
+b1 3
+b1 U
+b1 `
+1Y
+1;
+14
+1'
+1&
+#450000
+0&
+#455000
+b0 "
+b0 6
+b0 X
+b0 3
+b0 U
+b0 `
+0Y
+02
+0;
+04
+0'
+0)
+1&
+#460000
+0&
+#465000
+1&
+#470000
+0&
+#475000
+1&
+#480000
+0&
+#485000
+1&
+#490000
+0&
+#495000
+1&
+#500000
+0&
+#505000
+1&

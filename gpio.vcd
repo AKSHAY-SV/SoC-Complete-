@@ -1,0 +1,271 @@
+$date
+	Thu Jun 18 06:36:30 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_gpio_apb $end
+$var wire 1 ! pready $end
+$var wire 32 " prdata [31:0] $end
+$var wire 8 # gpio [7:0] $end
+$var reg 32 $ paddr [31:0] $end
+$var reg 1 % pclk $end
+$var reg 1 & penable $end
+$var reg 1 ' presetn $end
+$var reg 1 ( psel $end
+$var reg 32 ) pwdata [31:0] $end
+$var reg 1 * pwrite $end
+$scope module DUT $end
+$var wire 1 + apb_read $end
+$var wire 1 , apb_write $end
+$var wire 32 - paddr [31:0] $end
+$var wire 1 % pclk $end
+$var wire 1 & penable $end
+$var wire 1 ! pready $end
+$var wire 1 ' presetn $end
+$var wire 1 ( psel $end
+$var wire 32 . pwdata [31:0] $end
+$var wire 1 * pwrite $end
+$var wire 8 / gpio [7:0] $end
+$var reg 8 0 data_reg [7:0] $end
+$var reg 8 1 dir_reg [7:0] $end
+$var reg 32 2 prdata [31:0] $end
+$scope begin GPIO_BUFFER[0] $end
+$var parameter 2 3 i $end
+$upscope $end
+$scope begin GPIO_BUFFER[1] $end
+$var parameter 2 4 i $end
+$upscope $end
+$scope begin GPIO_BUFFER[2] $end
+$var parameter 3 5 i $end
+$upscope $end
+$scope begin GPIO_BUFFER[3] $end
+$var parameter 3 6 i $end
+$upscope $end
+$scope begin GPIO_BUFFER[4] $end
+$var parameter 4 7 i $end
+$upscope $end
+$scope begin GPIO_BUFFER[5] $end
+$var parameter 4 8 i $end
+$upscope $end
+$scope begin GPIO_BUFFER[6] $end
+$var parameter 4 9 i $end
+$upscope $end
+$scope begin GPIO_BUFFER[7] $end
+$var parameter 4 : i $end
+$upscope $end
+$upscope $end
+$scope task apb_read $end
+$var reg 32 ; addr [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 32 < addr [31:0] $end
+$var reg 32 = data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b111 :
+b110 9
+b101 8
+b100 7
+b11 6
+b10 5
+b1 4
+b0 3
+$end
+#0
+$dumpvars
+bx =
+bx <
+bx ;
+b0 2
+b0 1
+b0 0
+bz /
+b0 .
+b0 -
+0,
+0+
+0*
+b0 )
+0(
+0'
+0&
+0%
+b0 $
+bz #
+b0 "
+1!
+$end
+#5000
+1%
+#10000
+0%
+#15000
+1%
+#20000
+0%
+#25000
+1%
+#30000
+0%
+#35000
+1%
+#40000
+0%
+#45000
+b11111111 =
+b100 <
+1'
+1%
+#50000
+0%
+#55000
+b11111111 )
+b11111111 .
+b100 $
+b100 -
+1*
+1(
+1%
+#60000
+0%
+#65000
+1,
+1&
+1%
+#70000
+0%
+#75000
+b0 #
+b0 /
+b11111111 1
+0,
+b10100101 =
+b0 <
+0*
+0&
+0(
+1%
+#80000
+0%
+#85000
+b10100101 )
+b10100101 .
+b0 $
+b0 -
+1*
+1(
+1%
+#90000
+0%
+#95000
+1,
+1&
+1%
+#100000
+0%
+#105000
+b10100101 #
+b10100101 /
+b10100101 0
+0,
+b100 ;
+0*
+0&
+0(
+1%
+#110000
+0%
+#115000
+b100 $
+b100 -
+1(
+1%
+#120000
+0%
+#125000
+b11111111 "
+b11111111 2
+1+
+1&
+1%
+#130000
+0%
+#135000
+b0 "
+b0 2
+0+
+b0 ;
+0&
+0(
+1%
+#140000
+0%
+#145000
+b0 $
+b0 -
+1(
+1%
+#150000
+0%
+#155000
+b10100101 "
+b10100101 2
+1+
+1&
+1%
+#160000
+0%
+#165000
+b0 "
+b0 2
+0+
+0&
+0(
+1%
+#170000
+0%
+#175000
+1%
+#180000
+0%
+#185000
+1%
+#190000
+0%
+#195000
+1%
+#200000
+0%
+#205000
+1%
+#210000
+0%
+#215000
+1%
+#220000
+0%
+#225000
+1%
+#230000
+0%
+#235000
+1%
+#240000
+0%
+#245000
+1%
+#250000
+0%
+#255000
+1%
+#260000
+0%
+#265000
+1%

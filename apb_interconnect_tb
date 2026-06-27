@@ -1,0 +1,130 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x559b260fc3c0 .scope module, "tb_apb_interconnect" "tb_apb_interconnect" 2 3;
+ .timescale -9 -12;
+v0x559b2612ae70_0 .net "gpio_psel", 0 0, L_0x559b2612b820;  1 drivers
+v0x559b2612af30_0 .var "paddr", 31 0;
+v0x559b2612afd0_0 .var "penable", 0 0;
+v0x559b2612b070_0 .net "prdata", 31 0, L_0x559b2613c080;  1 drivers
+v0x559b2612b110_0 .net "pready", 0 0, L_0x559b2613c2f0;  1 drivers
+v0x559b2612b1b0_0 .var "psel", 0 0;
+v0x559b2612b250_0 .var "pwdata", 31 0;
+v0x559b2612b2f0_0 .var "pwrite", 0 0;
+v0x559b2612b390_0 .net "timer_psel", 0 0, L_0x559b2612bc10;  1 drivers
+S_0x559b2610cf90 .scope module, "DUT" "apb_interconnect" 2 18, 3 1 0, S_0x559b260fc3c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "psel";
+    .port_info 1 /INPUT 1 "penable";
+    .port_info 2 /INPUT 1 "pwrite";
+    .port_info 3 /INPUT 32 "paddr";
+    .port_info 4 /INPUT 32 "pwdata";
+    .port_info 5 /OUTPUT 32 "prdata";
+    .port_info 6 /OUTPUT 1 "pready";
+    .port_info 7 /OUTPUT 1 "gpio_psel";
+    .port_info 8 /OUTPUT 1 "gpio_penable";
+    .port_info 9 /OUTPUT 1 "gpio_pwrite";
+    .port_info 10 /OUTPUT 32 "gpio_paddr";
+    .port_info 11 /OUTPUT 32 "gpio_pwdata";
+    .port_info 12 /INPUT 32 "gpio_prdata";
+    .port_info 13 /INPUT 1 "gpio_pready";
+    .port_info 14 /OUTPUT 1 "timer_psel";
+    .port_info 15 /OUTPUT 1 "timer_penable";
+    .port_info 16 /OUTPUT 1 "timer_pwrite";
+    .port_info 17 /OUTPUT 32 "timer_paddr";
+    .port_info 18 /OUTPUT 32 "timer_pwdata";
+    .port_info 19 /INPUT 32 "timer_prdata";
+    .port_info 20 /INPUT 1 "timer_pready";
+L_0x559b2612b820 .functor AND 1, v0x559b2612b1b0_0, L_0x559b2612b4d0, C4<1>, C4<1>;
+L_0x559b2612b980 .functor BUFZ 1, v0x559b2612afd0_0, C4<0>, C4<0>, C4<0>;
+L_0x559b2612ba40 .functor BUFZ 1, v0x559b2612b2f0_0, C4<0>, C4<0>, C4<0>;
+L_0x559b2612bb00 .functor BUFZ 32, v0x559b2612af30_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x559b2612bba0 .functor BUFZ 32, v0x559b2612b250_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x559b2612bc10 .functor AND 1, v0x559b2612b1b0_0, L_0x559b2612b6b0, C4<1>, C4<1>;
+L_0x559b2612bd60 .functor BUFZ 1, v0x559b2612afd0_0, C4<0>, C4<0>, C4<0>;
+L_0x559b2612bdd0 .functor BUFZ 1, v0x559b2612b2f0_0, C4<0>, C4<0>, C4<0>;
+L_0x559b2612be90 .functor BUFZ 32, v0x559b2612af30_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x559b2612bf00 .functor BUFZ 32, v0x559b2612b250_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0x559b2610d370_0 .net *"_ivl_1", 3 0, L_0x559b2612b430;  1 drivers
+L_0x77af470e3018 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v0x559b26129320_0 .net/2u *"_ivl_2", 3 0, L_0x77af470e3018;  1 drivers
+L_0x77af470e30a8 .functor BUFT 1, C4<11011110101011011011111011101111>, C4<0>, C4<0>, C4<0>;
+v0x559b26129400_0 .net/2u *"_ivl_32", 31 0, L_0x77af470e30a8;  1 drivers
+v0x559b261294c0_0 .net *"_ivl_34", 31 0, L_0x559b2613bfe0;  1 drivers
+L_0x77af470e30f0 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x559b261295a0_0 .net/2u *"_ivl_38", 0 0, L_0x77af470e30f0;  1 drivers
+v0x559b261296d0_0 .net *"_ivl_40", 0 0, L_0x559b2613c1c0;  1 drivers
+v0x559b261297b0_0 .net *"_ivl_7", 3 0, L_0x559b2612b610;  1 drivers
+L_0x77af470e3060 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v0x559b26129890_0 .net/2u *"_ivl_8", 3 0, L_0x77af470e3060;  1 drivers
+v0x559b26129970_0 .net "gpio_paddr", 31 0, L_0x559b2612bb00;  1 drivers
+v0x559b26129a50_0 .net "gpio_penable", 0 0, L_0x559b2612b980;  1 drivers
+L_0x77af470e3138 .functor BUFT 1, C4<10101010101010100101010101010101>, C4<0>, C4<0>, C4<0>;
+v0x559b26129b10_0 .net "gpio_prdata", 31 0, L_0x77af470e3138;  1 drivers
+L_0x77af470e3180 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x559b26129bf0_0 .net "gpio_pready", 0 0, L_0x77af470e3180;  1 drivers
+v0x559b26129cb0_0 .net "gpio_psel", 0 0, L_0x559b2612b820;  alias, 1 drivers
+v0x559b26129d70_0 .net "gpio_pwdata", 31 0, L_0x559b2612bba0;  1 drivers
+v0x559b26129e50_0 .net "gpio_pwrite", 0 0, L_0x559b2612ba40;  1 drivers
+v0x559b26129f10_0 .net "paddr", 31 0, v0x559b2612af30_0;  1 drivers
+v0x559b26129ff0_0 .net "penable", 0 0, v0x559b2612afd0_0;  1 drivers
+v0x559b2612a0b0_0 .net "prdata", 31 0, L_0x559b2613c080;  alias, 1 drivers
+v0x559b2612a190_0 .net "pready", 0 0, L_0x559b2613c2f0;  alias, 1 drivers
+v0x559b2612a250_0 .net "psel", 0 0, v0x559b2612b1b0_0;  1 drivers
+v0x559b2612a310_0 .net "pwdata", 31 0, v0x559b2612b250_0;  1 drivers
+v0x559b2612a3f0_0 .net "pwrite", 0 0, v0x559b2612b2f0_0;  1 drivers
+v0x559b2612a4b0_0 .net "sel_gpio", 0 0, L_0x559b2612b4d0;  1 drivers
+v0x559b2612a570_0 .net "sel_timer", 0 0, L_0x559b2612b6b0;  1 drivers
+v0x559b2612a630_0 .net "timer_paddr", 31 0, L_0x559b2612be90;  1 drivers
+v0x559b2612a710_0 .net "timer_penable", 0 0, L_0x559b2612bd60;  1 drivers
+L_0x77af470e31c8 .functor BUFT 1, C4<00010010001101000101011001111000>, C4<0>, C4<0>, C4<0>;
+v0x559b2612a7d0_0 .net "timer_prdata", 31 0, L_0x77af470e31c8;  1 drivers
+L_0x77af470e3210 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x559b2612a8b0_0 .net "timer_pready", 0 0, L_0x77af470e3210;  1 drivers
+v0x559b2612a970_0 .net "timer_psel", 0 0, L_0x559b2612bc10;  alias, 1 drivers
+v0x559b2612aa30_0 .net "timer_pwdata", 31 0, L_0x559b2612bf00;  1 drivers
+v0x559b2612ab10_0 .net "timer_pwrite", 0 0, L_0x559b2612bdd0;  1 drivers
+L_0x559b2612b430 .part v0x559b2612af30_0, 12, 4;
+L_0x559b2612b4d0 .cmp/eq 4, L_0x559b2612b430, L_0x77af470e3018;
+L_0x559b2612b610 .part v0x559b2612af30_0, 12, 4;
+L_0x559b2612b6b0 .cmp/eq 4, L_0x559b2612b610, L_0x77af470e3060;
+L_0x559b2613bfe0 .functor MUXZ 32, L_0x77af470e30a8, L_0x77af470e31c8, L_0x559b2612b6b0, C4<>;
+L_0x559b2613c080 .functor MUXZ 32, L_0x559b2613bfe0, L_0x77af470e3138, L_0x559b2612b4d0, C4<>;
+L_0x559b2613c1c0 .functor MUXZ 1, L_0x77af470e30f0, L_0x77af470e3210, L_0x559b2612b6b0, C4<>;
+L_0x559b2613c2f0 .functor MUXZ 1, L_0x559b2613c1c0, L_0x77af470e3180, L_0x559b2612b4d0, C4<>;
+    .scope S_0x559b260fc3c0;
+T_0 ;
+    %vpi_call 2 49 "$dumpfile", "apb_interconnect.vcd" {0 0 0};
+    %vpi_call 2 50 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x559b260fc3c0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x559b2612b1b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x559b2612afd0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x559b2612b2f0_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x559b2612b250_0, 0, 32;
+    %pushi/vec4 4, 0, 32;
+    %store/vec4 v0x559b2612af30_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 65 "$display", "GPIO_SEL=%b TIMER_SEL=%b DATA=%h", v0x559b2612ae70_0, v0x559b2612b390_0, v0x559b2612b070_0 {0 0 0};
+    %pushi/vec4 4100, 0, 32;
+    %store/vec4 v0x559b2612af30_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 76 "$display", "GPIO_SEL=%b TIMER_SEL=%b DATA=%h", v0x559b2612ae70_0, v0x559b2612b390_0, v0x559b2612b070_0 {0 0 0};
+    %delay 20000, 0;
+    %vpi_call 2 81 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb/tb_apb_interconnect.v";
+    "rtl/apb_interconnect.v";

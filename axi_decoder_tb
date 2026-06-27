@@ -1,0 +1,66 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5801db7fe370 .scope module, "tb_axi_decoder" "tb_axi_decoder" 2 3;
+ .timescale -9 -12;
+v0x5801db813470_0 .var "addr", 31 0;
+v0x5801db813550_0 .net "apb_sel", 0 0, L_0x5801db813d20;  1 drivers
+v0x5801db8135f0_0 .net "ram_sel", 0 0, L_0x5801db813ac0;  1 drivers
+v0x5801db8136f0_0 .net "rom_sel", 0 0, L_0x5801db813890;  1 drivers
+S_0x5801db7fe500 .scope module, "DUT" "axi_decoder" 2 11, 3 1 0, S_0x5801db7fe370;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "addr";
+    .port_info 1 /OUTPUT 1 "rom_sel";
+    .port_info 2 /OUTPUT 1 "ram_sel";
+    .port_info 3 /OUTPUT 1 "apb_sel";
+v0x5801db7ee730_0 .net *"_ivl_1", 3 0, L_0x5801db8137c0;  1 drivers
+v0x5801db812c40_0 .net *"_ivl_13", 3 0, L_0x5801db813c80;  1 drivers
+L_0x7195d03860a8 .functor BUFT 1, C4<0100>, C4<0>, C4<0>, C4<0>;
+v0x5801db812d20_0 .net/2u *"_ivl_14", 3 0, L_0x7195d03860a8;  1 drivers
+L_0x7195d0386018 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v0x5801db812de0_0 .net/2u *"_ivl_2", 3 0, L_0x7195d0386018;  1 drivers
+v0x5801db812ec0_0 .net *"_ivl_7", 3 0, L_0x5801db813a20;  1 drivers
+L_0x7195d0386060 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v0x5801db812ff0_0 .net/2u *"_ivl_8", 3 0, L_0x7195d0386060;  1 drivers
+v0x5801db8130d0_0 .net "addr", 31 0, v0x5801db813470_0;  1 drivers
+v0x5801db8131b0_0 .net "apb_sel", 0 0, L_0x5801db813d20;  alias, 1 drivers
+v0x5801db813270_0 .net "ram_sel", 0 0, L_0x5801db813ac0;  alias, 1 drivers
+v0x5801db813330_0 .net "rom_sel", 0 0, L_0x5801db813890;  alias, 1 drivers
+L_0x5801db8137c0 .part v0x5801db813470_0, 28, 4;
+L_0x5801db813890 .cmp/eq 4, L_0x5801db8137c0, L_0x7195d0386018;
+L_0x5801db813a20 .part v0x5801db813470_0, 28, 4;
+L_0x5801db813ac0 .cmp/eq 4, L_0x5801db813a20, L_0x7195d0386060;
+L_0x5801db813c80 .part v0x5801db813470_0, 28, 4;
+L_0x5801db813d20 .cmp/eq 4, L_0x5801db813c80, L_0x7195d03860a8;
+    .scope S_0x5801db7fe370;
+T_0 ;
+    %vpi_call 2 23 "$dumpfile", "axi_decoder.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5801db7fe370 {0 0 0};
+    %pushi/vec4 4096, 0, 32;
+    %store/vec4 v0x5801db813470_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 34 "$display", "ROM=%b RAM=%b APB=%b", v0x5801db8136f0_0, v0x5801db8135f0_0, v0x5801db813550_0 {0 0 0};
+    %pushi/vec4 268435456, 0, 32;
+    %store/vec4 v0x5801db813470_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 47 "$display", "ROM=%b RAM=%b APB=%b", v0x5801db8136f0_0, v0x5801db8135f0_0, v0x5801db813550_0 {0 0 0};
+    %pushi/vec4 1073741824, 0, 32;
+    %store/vec4 v0x5801db813470_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 60 "$display", "ROM=%b RAM=%b APB=%b", v0x5801db8136f0_0, v0x5801db8135f0_0, v0x5801db813550_0 {0 0 0};
+    %delay 20000, 0;
+    %vpi_call 2 67 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb/tb_axi_decoder.v";
+    "rtl/axi_decoder.v";

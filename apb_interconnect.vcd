@@ -1,0 +1,785 @@
+$date
+	Thu Jun 18 10:14:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_apb_interconnect $end
+$var wire 1 ! timer_psel $end
+$var wire 1 " pready $end
+$var wire 32 # prdata [31:0] $end
+$var wire 1 $ gpio_psel $end
+$var reg 32 % paddr [31:0] $end
+$var reg 1 & penable $end
+$var reg 1 ' psel $end
+$var reg 32 ( pwdata [31:0] $end
+$var reg 1 ) pwrite $end
+$scope module DUT $end
+$var wire 32 * gpio_paddr [31:0] $end
+$var wire 1 + gpio_penable $end
+$var wire 32 , gpio_prdata [31:0] $end
+$var wire 1 - gpio_pready $end
+$var wire 1 $ gpio_psel $end
+$var wire 32 . gpio_pwdata [31:0] $end
+$var wire 1 / gpio_pwrite $end
+$var wire 32 0 paddr [31:0] $end
+$var wire 1 & penable $end
+$var wire 32 1 plic_paddr [31:0] $end
+$var wire 1 2 plic_penable $end
+$var wire 32 3 plic_prdata [31:0] $end
+$var wire 1 4 plic_pready $end
+$var wire 1 5 plic_psel $end
+$var wire 32 6 plic_pwdata [31:0] $end
+$var wire 1 7 plic_pwrite $end
+$var wire 1 ' psel $end
+$var wire 32 8 pwdata [31:0] $end
+$var wire 1 ) pwrite $end
+$var wire 32 9 spi_paddr [31:0] $end
+$var wire 1 : spi_penable $end
+$var wire 32 ; spi_prdata [31:0] $end
+$var wire 1 < spi_pready $end
+$var wire 1 = spi_psel $end
+$var wire 32 > spi_pwdata [31:0] $end
+$var wire 1 ? spi_pwrite $end
+$var wire 32 @ timer_paddr [31:0] $end
+$var wire 1 A timer_penable $end
+$var wire 32 B timer_prdata [31:0] $end
+$var wire 1 C timer_pready $end
+$var wire 1 ! timer_psel $end
+$var wire 32 D timer_pwdata [31:0] $end
+$var wire 1 E timer_pwrite $end
+$var wire 1 F sel_timer $end
+$var wire 1 G sel_spi $end
+$var wire 1 H sel_plic $end
+$var wire 1 I sel_gpio $end
+$var wire 1 " pready $end
+$var wire 32 J prdata [31:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_apb_subsystem $end
+$var wire 1 K pready $end
+$var wire 32 L prdata [31:0] $end
+$var wire 8 M gpio [7:0] $end
+$var wire 1 N cpu_irq $end
+$var reg 32 O paddr [31:0] $end
+$var reg 1 P pclk $end
+$var reg 1 Q penable $end
+$var reg 1 R presetn $end
+$var reg 1 S psel $end
+$var reg 32 T pwdata [31:0] $end
+$var reg 1 U pwrite $end
+$scope module DUT $end
+$var wire 1 V gpio_irq $end
+$var wire 1 W gpio_pready $end
+$var wire 32 X paddr [31:0] $end
+$var wire 1 P pclk $end
+$var wire 1 Q penable $end
+$var wire 1 Y plic_pready $end
+$var wire 1 R presetn $end
+$var wire 1 S psel $end
+$var wire 32 Z pwdata [31:0] $end
+$var wire 1 U pwrite $end
+$var wire 1 [ spi_miso $end
+$var wire 1 \ spi_pready $end
+$var wire 1 ] timer_pready $end
+$var wire 1 ^ uart_irq $end
+$var wire 1 _ timer_pwrite $end
+$var wire 32 ` timer_pwdata [31:0] $end
+$var wire 1 a timer_psel $end
+$var wire 32 b timer_prdata [31:0] $end
+$var wire 1 c timer_penable $end
+$var wire 32 d timer_paddr [31:0] $end
+$var wire 1 e timer_irq $end
+$var wire 1 f spi_sclk $end
+$var wire 1 g spi_pwrite $end
+$var wire 32 h spi_pwdata [31:0] $end
+$var wire 1 i spi_psel $end
+$var wire 32 j spi_prdata [31:0] $end
+$var wire 1 k spi_penable $end
+$var wire 32 l spi_paddr [31:0] $end
+$var wire 1 m spi_mosi $end
+$var wire 1 n spi_irq $end
+$var wire 1 o spi_cs_n $end
+$var wire 1 K pready $end
+$var wire 32 p prdata [31:0] $end
+$var wire 1 q plic_pwrite $end
+$var wire 32 r plic_pwdata [31:0] $end
+$var wire 1 s plic_psel $end
+$var wire 32 t plic_prdata [31:0] $end
+$var wire 1 u plic_penable $end
+$var wire 32 v plic_paddr [31:0] $end
+$var wire 1 w gpio_pwrite $end
+$var wire 32 x gpio_pwdata [31:0] $end
+$var wire 1 y gpio_psel $end
+$var wire 32 z gpio_prdata [31:0] $end
+$var wire 1 { gpio_penable $end
+$var wire 32 | gpio_paddr [31:0] $end
+$var wire 8 } gpio [7:0] $end
+$var wire 1 N cpu_irq $end
+$scope module gpio_inst $end
+$var wire 1 ~ apb_read $end
+$var wire 1 !" apb_write $end
+$var wire 1 P pclk $end
+$var wire 1 W pready $end
+$var wire 1 R presetn $end
+$var wire 1 w pwrite $end
+$var wire 32 "" pwdata [31:0] $end
+$var wire 1 y psel $end
+$var wire 1 { penable $end
+$var wire 32 #" paddr [31:0] $end
+$var wire 8 $" gpio [7:0] $end
+$var reg 8 %" data_reg [7:0] $end
+$var reg 8 &" dir_reg [7:0] $end
+$var reg 32 '" prdata [31:0] $end
+$scope begin GPIO_BUFFER[0] $end
+$var parameter 2 (" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[1] $end
+$var parameter 2 )" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[2] $end
+$var parameter 3 *" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[3] $end
+$var parameter 3 +" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[4] $end
+$var parameter 4 ," i $end
+$upscope $end
+$scope begin GPIO_BUFFER[5] $end
+$var parameter 4 -" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[6] $end
+$var parameter 4 ." i $end
+$upscope $end
+$scope begin GPIO_BUFFER[7] $end
+$var parameter 4 /" i $end
+$upscope $end
+$upscope $end
+$scope module interconnect $end
+$var wire 32 0" gpio_paddr [31:0] $end
+$var wire 1 { gpio_penable $end
+$var wire 32 1" gpio_prdata [31:0] $end
+$var wire 1 W gpio_pready $end
+$var wire 1 y gpio_psel $end
+$var wire 32 2" gpio_pwdata [31:0] $end
+$var wire 1 w gpio_pwrite $end
+$var wire 32 3" paddr [31:0] $end
+$var wire 1 Q penable $end
+$var wire 32 4" plic_paddr [31:0] $end
+$var wire 1 u plic_penable $end
+$var wire 1 Y plic_pready $end
+$var wire 1 s plic_psel $end
+$var wire 32 5" plic_pwdata [31:0] $end
+$var wire 1 q plic_pwrite $end
+$var wire 1 S psel $end
+$var wire 32 6" pwdata [31:0] $end
+$var wire 1 U pwrite $end
+$var wire 32 7" spi_paddr [31:0] $end
+$var wire 1 k spi_penable $end
+$var wire 1 \ spi_pready $end
+$var wire 1 i spi_psel $end
+$var wire 32 8" spi_pwdata [31:0] $end
+$var wire 1 g spi_pwrite $end
+$var wire 32 9" timer_paddr [31:0] $end
+$var wire 1 c timer_penable $end
+$var wire 1 ] timer_pready $end
+$var wire 1 a timer_psel $end
+$var wire 32 :" timer_pwdata [31:0] $end
+$var wire 1 _ timer_pwrite $end
+$var wire 32 ;" timer_prdata [31:0] $end
+$var wire 32 <" spi_prdata [31:0] $end
+$var wire 1 =" sel_timer $end
+$var wire 1 >" sel_spi $end
+$var wire 1 ?" sel_plic $end
+$var wire 1 @" sel_gpio $end
+$var wire 1 K pready $end
+$var wire 32 A" prdata [31:0] $end
+$var wire 32 B" plic_prdata [31:0] $end
+$upscope $end
+$scope module plic_inst $end
+$var wire 1 C" apb_read $end
+$var wire 1 D" apb_write $end
+$var wire 1 V gpio_irq $end
+$var wire 32 E" paddr [31:0] $end
+$var wire 1 P pclk $end
+$var wire 1 u penable $end
+$var wire 1 Y pready $end
+$var wire 1 R presetn $end
+$var wire 1 s psel $end
+$var wire 32 F" pwdata [31:0] $end
+$var wire 1 q pwrite $end
+$var wire 1 ^ uart_irq $end
+$var wire 1 e timer_irq $end
+$var wire 1 n spi_irq $end
+$var wire 1 N cpu_irq $end
+$var reg 4 G" enable_reg [3:0] $end
+$var reg 4 H" pending_reg [3:0] $end
+$var reg 32 I" prdata [31:0] $end
+$upscope $end
+$scope module spi_inst $end
+$var wire 1 J" apb_read $end
+$var wire 1 K" apb_write $end
+$var wire 1 [ miso $end
+$var wire 32 L" paddr [31:0] $end
+$var wire 1 P pclk $end
+$var wire 1 k penable $end
+$var wire 1 \ pready $end
+$var wire 1 R presetn $end
+$var wire 1 i psel $end
+$var wire 32 M" pwdata [31:0] $end
+$var wire 1 g pwrite $end
+$var wire 1 m mosi $end
+$var wire 1 n irq $end
+$var reg 4 N" bit_count [3:0] $end
+$var reg 1 O" busy $end
+$var reg 32 P" control_reg [31:0] $end
+$var reg 1 o cs_n $end
+$var reg 32 Q" prdata [31:0] $end
+$var reg 8 R" rxdata_reg [7:0] $end
+$var reg 1 f sclk $end
+$var reg 8 S" shift_rx [7:0] $end
+$var reg 8 T" shift_tx [7:0] $end
+$var reg 32 U" status_reg [31:0] $end
+$var reg 8 V" txdata_reg [7:0] $end
+$upscope $end
+$scope module timer_inst $end
+$var wire 1 W" apb_read $end
+$var wire 1 X" apb_write $end
+$var wire 32 Y" paddr [31:0] $end
+$var wire 1 P pclk $end
+$var wire 1 c penable $end
+$var wire 1 ] pready $end
+$var wire 1 R presetn $end
+$var wire 1 a psel $end
+$var wire 32 Z" pwdata [31:0] $end
+$var wire 1 _ pwrite $end
+$var wire 1 e irq $end
+$var reg 32 [" control_reg [31:0] $end
+$var reg 32 \" irq_status_reg [31:0] $end
+$var reg 32 ]" load_reg [31:0] $end
+$var reg 32 ^" prdata [31:0] $end
+$var reg 32 _" value_reg [31:0] $end
+$upscope $end
+$upscope $end
+$scope task apb_read $end
+$var reg 32 `" addr [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 32 a" addr [31:0] $end
+$var reg 32 b" data [31:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_gpio_apb $end
+$var wire 1 c" pready $end
+$var wire 32 d" prdata [31:0] $end
+$var wire 8 e" gpio [7:0] $end
+$var reg 32 f" paddr [31:0] $end
+$var reg 1 g" pclk $end
+$var reg 1 h" penable $end
+$var reg 1 i" presetn $end
+$var reg 1 j" psel $end
+$var reg 32 k" pwdata [31:0] $end
+$var reg 1 l" pwrite $end
+$scope module DUT $end
+$var wire 1 m" apb_read $end
+$var wire 1 n" apb_write $end
+$var wire 32 o" paddr [31:0] $end
+$var wire 1 g" pclk $end
+$var wire 1 h" penable $end
+$var wire 1 c" pready $end
+$var wire 1 i" presetn $end
+$var wire 1 j" psel $end
+$var wire 32 p" pwdata [31:0] $end
+$var wire 1 l" pwrite $end
+$var wire 8 q" gpio [7:0] $end
+$var reg 8 r" data_reg [7:0] $end
+$var reg 8 s" dir_reg [7:0] $end
+$var reg 32 t" prdata [31:0] $end
+$scope begin GPIO_BUFFER[0] $end
+$var parameter 2 u" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[1] $end
+$var parameter 2 v" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[2] $end
+$var parameter 3 w" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[3] $end
+$var parameter 3 x" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[4] $end
+$var parameter 4 y" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[5] $end
+$var parameter 4 z" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[6] $end
+$var parameter 4 {" i $end
+$upscope $end
+$scope begin GPIO_BUFFER[7] $end
+$var parameter 4 |" i $end
+$upscope $end
+$upscope $end
+$scope task apb_read $end
+$var reg 32 }" addr [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 32 ~" addr [31:0] $end
+$var reg 32 !# data [31:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_plic_simple $end
+$var wire 1 "# pready $end
+$var wire 32 ## prdata [31:0] $end
+$var wire 1 $# cpu_irq $end
+$var reg 1 %# gpio_irq $end
+$var reg 32 &# paddr [31:0] $end
+$var reg 1 '# pclk $end
+$var reg 1 (# penable $end
+$var reg 1 )# presetn $end
+$var reg 1 *# psel $end
+$var reg 32 +# pwdata [31:0] $end
+$var reg 1 ,# pwrite $end
+$var reg 1 -# timer_irq $end
+$scope module DUT $end
+$var wire 1 .# apb_read $end
+$var wire 1 /# apb_write $end
+$var wire 1 %# gpio_irq $end
+$var wire 32 0# paddr [31:0] $end
+$var wire 1 '# pclk $end
+$var wire 1 (# penable $end
+$var wire 1 "# pready $end
+$var wire 1 )# presetn $end
+$var wire 1 *# psel $end
+$var wire 32 1# pwdata [31:0] $end
+$var wire 1 ,# pwrite $end
+$var wire 1 2# spi_irq $end
+$var wire 1 -# timer_irq $end
+$var wire 1 3# uart_irq $end
+$var wire 1 $# cpu_irq $end
+$var reg 4 4# enable_reg [3:0] $end
+$var reg 4 5# pending_reg [3:0] $end
+$var reg 32 6# prdata [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 32 7# addr [31:0] $end
+$var reg 32 8# data [31:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_spi_master_apb $end
+$var wire 1 9# miso $end
+$var wire 1 :# pready $end
+$var wire 1 ;# sclk $end
+$var wire 32 <# prdata [31:0] $end
+$var wire 1 =# mosi $end
+$var wire 1 ># irq $end
+$var wire 1 ?# cs_n $end
+$var reg 32 @# paddr [31:0] $end
+$var reg 1 A# pclk $end
+$var reg 1 B# penable $end
+$var reg 1 C# presetn $end
+$var reg 1 D# psel $end
+$var reg 32 E# pwdata [31:0] $end
+$var reg 1 F# pwrite $end
+$scope module DUT $end
+$var wire 1 G# apb_read $end
+$var wire 1 H# apb_write $end
+$var wire 1 9# miso $end
+$var wire 32 I# paddr [31:0] $end
+$var wire 1 A# pclk $end
+$var wire 1 B# penable $end
+$var wire 1 :# pready $end
+$var wire 1 C# presetn $end
+$var wire 1 D# psel $end
+$var wire 32 J# pwdata [31:0] $end
+$var wire 1 F# pwrite $end
+$var wire 1 =# mosi $end
+$var wire 1 ># irq $end
+$var reg 4 K# bit_count [3:0] $end
+$var reg 1 L# busy $end
+$var reg 32 M# control_reg [31:0] $end
+$var reg 1 ?# cs_n $end
+$var reg 32 N# prdata [31:0] $end
+$var reg 8 O# rxdata_reg [7:0] $end
+$var reg 1 ;# sclk $end
+$var reg 8 P# shift_rx [7:0] $end
+$var reg 8 Q# shift_tx [7:0] $end
+$var reg 32 R# status_reg [31:0] $end
+$var reg 8 S# txdata_reg [7:0] $end
+$upscope $end
+$scope task apb_read $end
+$var reg 32 T# addr [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 32 U# addr [31:0] $end
+$var reg 32 V# data [31:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_timer_apb $end
+$var wire 1 W# pready $end
+$var wire 32 X# prdata [31:0] $end
+$var wire 1 Y# irq $end
+$var reg 32 Z# paddr [31:0] $end
+$var reg 1 [# pclk $end
+$var reg 1 \# penable $end
+$var reg 1 ]# presetn $end
+$var reg 1 ^# psel $end
+$var reg 32 _# pwdata [31:0] $end
+$var reg 1 `# pwrite $end
+$scope module DUT $end
+$var wire 1 a# apb_read $end
+$var wire 1 b# apb_write $end
+$var wire 32 c# paddr [31:0] $end
+$var wire 1 [# pclk $end
+$var wire 1 \# penable $end
+$var wire 1 W# pready $end
+$var wire 1 ]# presetn $end
+$var wire 1 ^# psel $end
+$var wire 32 d# pwdata [31:0] $end
+$var wire 1 `# pwrite $end
+$var wire 1 Y# irq $end
+$var reg 32 e# control_reg [31:0] $end
+$var reg 32 f# irq_status_reg [31:0] $end
+$var reg 32 g# load_reg [31:0] $end
+$var reg 32 h# prdata [31:0] $end
+$var reg 32 i# value_reg [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 32 j# addr [31:0] $end
+$var reg 32 k# data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b111 |"
+b110 {"
+b101 z"
+b100 y"
+b11 x"
+b10 w"
+b1 v"
+b0 u"
+b111 /"
+b110 ."
+b101 -"
+b100 ,"
+b11 +"
+b10 *"
+b1 )"
+b0 ("
+$end
+#0
+$dumpvars
+bx k#
+bx j#
+b0 i#
+b0 h#
+b0 g#
+b0 f#
+b0 e#
+bx d#
+bx c#
+0b#
+0a#
+0`#
+bx _#
+0^#
+0]#
+0\#
+0[#
+bx Z#
+0Y#
+b0 X#
+1W#
+bx V#
+bx U#
+bx T#
+b0 S#
+b0 R#
+b0 Q#
+b0 P#
+b0 O#
+b0 N#
+b0 M#
+0L#
+b0 K#
+b0 J#
+b0 I#
+0H#
+0G#
+0F#
+b0 E#
+0D#
+0C#
+0B#
+0A#
+b0 @#
+1?#
+0>#
+0=#
+b0 <#
+0;#
+1:#
+09#
+bx 8#
+bx 7#
+b0 6#
+b0 5#
+b0 4#
+z3#
+z2#
+b0 1#
+b0 0#
+0/#
+0.#
+0-#
+0,#
+b0 +#
+0*#
+0)#
+0(#
+0'#
+b0 &#
+0%#
+0$#
+b0 ##
+1"#
+bx !#
+bx ~"
+bx }"
+b0 t"
+b0 s"
+b0 r"
+bz q"
+b0 p"
+b0 o"
+0n"
+0m"
+0l"
+b0 k"
+0j"
+0i"
+0h"
+0g"
+b0 f"
+bz e"
+b0 d"
+1c"
+bx b"
+bx a"
+bx `"
+b0 _"
+b0 ^"
+b0 ]"
+b0 \"
+b0 ["
+b0 Z"
+b0 Y"
+0X"
+0W"
+b0 V"
+b0 U"
+b0 T"
+b0 S"
+b0 R"
+b0 Q"
+b0 P"
+0O"
+b0 N"
+b0 M"
+b0 L"
+0K"
+0J"
+b0 I"
+b0 H"
+b0 G"
+b0 F"
+b0 E"
+0D"
+0C"
+b0 B"
+b0 A"
+1@"
+0?"
+0>"
+0="
+b0 <"
+b0 ;"
+b0 :"
+b0 9"
+b0 8"
+b0 7"
+b0 6"
+b0 5"
+b0 4"
+b0 3"
+b0 2"
+b0 1"
+b0 0"
+b0 '"
+b0 &"
+b0 %"
+bz $"
+b0 #"
+b0 ""
+0!"
+0~
+bz }
+b0 |
+0{
+b0 z
+0y
+b0 x
+0w
+b0 v
+0u
+b0 t
+0s
+b0 r
+0q
+b0 p
+1o
+0n
+0m
+b0 l
+0k
+b0 j
+0i
+b0 h
+0g
+0f
+0e
+b0 d
+0c
+b0 b
+0a
+b0 `
+0_
+0^
+1]
+1\
+0[
+b0 Z
+1Y
+b0 X
+1W
+0V
+0U
+b0 T
+0S
+0R
+0Q
+0P
+b0 O
+0N
+bz M
+b0 L
+1K
+b10101010101010100101010101010101 J
+1I
+0H
+0G
+0F
+0E
+b0 D
+1C
+b10010001101000101011001111000 B
+1A
+b100 @
+0?
+b0 >
+0=
+z<
+bz ;
+1:
+b100 9
+b0 8
+07
+b0 6
+05
+z4
+bz 3
+12
+b100 1
+b100 0
+0/
+b0 .
+1-
+b10101010101010100101010101010101 ,
+1+
+b100 *
+0)
+b0 (
+1'
+1&
+b100 %
+1$
+b10101010101010100101010101010101 #
+1"
+0!
+$end
+#5000
+1[#
+1A#
+1'#
+1g"
+1P
+#10000
+b10010001101000101011001111000 #
+b10010001101000101011001111000 J
+0$
+1!
+0I
+1F
+0[#
+0A#
+0'#
+0g"
+0P
+b1000000000100 *
+b1000000000100 @
+b1000000000100 9
+b1000000000100 1
+b1000000000100 %
+b1000000000100 0
+#15000
+1[#
+1A#
+1'#
+1g"
+1P
+#20000
+0[#
+0A#
+0'#
+0g"
+0P
+#25000
+1[#
+1A#
+1'#
+1g"
+1P
+#30000
+0[#
+0A#
+0'#
+0g"
+0P
+#35000
+1[#
+1A#
+1'#
+1g"
+1P
+#40000
+0[#
+0A#
+0'#
+0g"
+0P
